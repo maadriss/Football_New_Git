@@ -15,8 +15,8 @@ namespace TriviaQuizGame.Types
 		public Sprite image;
 
 		#if !UNITY_ANDROID && !UNITY_IOS && !UNITY_BLACKBERRY && !UNITY_WP8 && !UNITY_WEBGL
-		[Tooltip("A video that accompanies the answer. You can leave this empty if you don't want a video")]
-		internal MovieTexture video;
+		//[Tooltip("A video that accompanies the answer. You can leave this empty if you don't want a video")]
+		//internal MovieTexture video;
 		#endif
 
 		[Tooltip("A sound that accompanies the answer. You can leave this empty if you don't want a sound")]

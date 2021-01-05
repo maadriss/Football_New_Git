@@ -102,7 +102,7 @@ namespace TriviaQuizGame.Types
 					{
 						#if !UNITY_ANDROID && !UNITY_IOS && !UNITY_BLACKBERRY && !UNITY_WP8 && !UNITY_WEBGL
 						// Assign the video to the right slot in the game controller. All videos should be placed in the Resources/Videos/ path. You should enter the name of the video without the path and without an extension (ex; .mp4 )
-						questionsTemp[questionIndex].video = Resources.Load<MovieTexture>("Videos/" + XmlQuestion.InnerText); 
+						//questionsTemp[questionIndex].video = Resources.Load<MovieTexture>("Videos/" + XmlQuestion.InnerText); 
 						#else
 						if ( XmlQuestion.InnerText != string.Empty )    Debug.LogWarning("You have imported a question that contains a video while using a mobile platform. Unity does not support videos on mobile platforms. The question is '" + questions[questionIndex].question + "'");
 						#endif
@@ -199,7 +199,7 @@ namespace TriviaQuizGame.Types
 				
 				#if !UNITY_ANDROID && !UNITY_IOS && !UNITY_BLACKBERRY && !UNITY_WP8 && !UNITY_WEBGL
 				// The question video, if it exists
-				if ( questions[index].video )    xmlString += "    <Video>" + questions[index].video.name + "</Video>" + "\n";
+				//if ( questions[index].video )    xmlString += "    <Video>" + questions[index].video.name + "</Video>" + "\n";
 				#endif
 				// The start of the list of answers
 				xmlString += "    <Answers>" + "\n";
