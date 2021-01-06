@@ -241,8 +241,9 @@ namespace TriviaQuizGame
 		// Powerups!				
 		public void AddTime()
 		{
-			globalTime += 30;
-			timeLeft = globalTime;
+			// Set bonus time to remaining time.			
+			timeLeft += 30;
+			globalTime = timeLeft;
 		}
 		public void DeleteTwoWrongAnswers()
 		{
@@ -269,7 +270,16 @@ namespace TriviaQuizGame
 				{ texts[i].transform.parent.gameObject.SetActive(false); }
 			}
 		}
+		public void KnowEnemiesAnswer()
+        {
+			// Flow:
 
+        }
+		public void ChooseTwoAnswers()
+        {
+			maximumMistakes = 2;
+        }
+		
 		// Each powerup should use one time in entire game. For this reason we use this method to
 		// make each button stop working.		
 		public void StopButtons(Button button)
@@ -1078,7 +1088,7 @@ namespace TriviaQuizGame
 					{
 						// Give no bonus
 						bonus = 0;
-
+						
 						// Display the bonus text
 						if (bonusObject) bonusObject.Find("Text").GetComponent<Text>().text = bonus.ToString();
 
